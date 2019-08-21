@@ -1,7 +1,5 @@
 <?php
-
-$path=dirname(dirname(__FILE__)); 
-include_once($path.'/services/userService.php');
+ 
 class UserController{
     //添加
     public function register(){

@@ -3,7 +3,7 @@
  * 数据库操作 实例化的PDO实例对象
  * 
  */ 
-require_once('./../config/db_config.php');
+// require_once('./../config/db_config.php');
 
 class DB_{
     private static $pdo=null;

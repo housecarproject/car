@@ -1,26 +1,21 @@
-<?php
-
-$path=dirname(dirname(__FILE__)); 
-include_once($path.'/services/adminService.php');
+<?php 
 class AdminController{
-    //添加
-    public function register(){
+    //添加管理员
+    public function a_add_c(){
         // 数据验证
-    //     $data=["user_name"=>$_GET['username'],
-    //     "pass_word"=>$_GET['password'],
-    //     "phone_num"=>$_GET['phonenum'],
-    //     "qq"=>$_GET['qq']
-    //     ];
-    //     $userService=new userService;
-    //     $res=$userService->add($data);
-    //    echo json_encode($res);
+        $data=[
+            "admin_name"=>$_POST['adminName'],
+            "admin_password"=>$_POST['adminPassword'],
+            "admin_type"=>$_POST['adminType'],
+        ];
+        // var_dump($data);
+        $adminService=new AdminService;
+        $res=$adminService->a_add_s($data);
+        var_dump($res);
     }
-
-   
-}
-
-// $action=$_POST['action'];
-// $userCon=new UserController;
-// if($action=='select'){
-//     $userCon->select();
-// }
+    public function select(){
+        $adminService=new AdminService;
+        $res=$adminService->selectAll();
+        echo json_encode($res);
+    }
+} 

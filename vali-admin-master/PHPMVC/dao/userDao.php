@@ -1,6 +1,4 @@
-<?php
-$path=dirname(dirname(__FILE__)); 
-require_once($path.'/db/db_sql.php');
+<?php 
 class UserDao extends BaseDao{
     //查询
     public function _selectAll(){
@@ -30,6 +28,6 @@ class UserDao extends BaseDao{
         return $res;
     }
 }
-$s=new UserDao;
-// echo json_encode($s->_selectAll());
-echo json_encode($s->_anotherSelect());
+// $s=new UserDao;
+// // echo json_encode($s->_selectAll());
+// echo json_encode($s->_anotherSelect());
