@@ -1,7 +1,7 @@
 <?php 
 class adminDao extends BaseDao{
     //查询
-    public function _selectAll(){
+    public function _selectAllAdmin(){
         $res=parent::table('tab_admin')->select();
         return $res;
     }
