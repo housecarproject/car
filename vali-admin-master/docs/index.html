@@ -89,8 +89,8 @@
             <ul class="treeview-menu">
               <li><a class="treeview-item admin_info" href="#"><i class="icon fa
                     fa-circle-o"></i> 普通管理员信息表</a></li>
-              <li><a class="treeview-item" href="#"><i class="icon fa
-                    fa-circle-o"></i> 添加普通管理员</a></li>
+              <li><a class="treeview-item add_admin" href="#" ><i class="icon fa
+                    fa-circle-o "></i> 添加普通管理员</a></li>
             </ul>
           </li>
           <li class="treeview"><a class="app-menu__item" href="#"
@@ -135,9 +135,11 @@
                 class="app-menu__label">罚金管理</span><i
                 class="treeview-indicator fa fa-angle-right"></i></a>
             <ul class="treeview-menu">
+                <!-- <li><a class="treeview-item" href="#"><i class="icon fa
+                  fa-circle-o"></i>损耗管理</a></li> -->
               <li><a class="treeview-item" href="#"><i class="icon fa
                     fa-circle-o"></i>缴纳罚金记录</a></li>
-              <li><a class="treeview-item" href="#"><i class="icon fa
+              <li><a class="treeview-item needpay" href="#"><i class="icon fa
                     fa-circle-o"></i>待缴纳罚金</a></li>
             </ul>
           </li>
@@ -178,6 +180,7 @@
             </tbody>
           </table>
         </div>
+
         <!-- 用户 -->
         <div class="user_content" style='display: none'>
           <table class="table table-striped table-hover">
@@ -210,6 +213,25 @@
           </table>
 
         </div>
+
+        <!-- 待缴纳罚金 -->
+        <div class="needpay_content" style='display: none'>
+            <table class="table table-striped table-hover">
+              <thead>
+                  <th>罚金id</th>
+                  <th>罚金类型id</th>
+                  <th>订单id</th>
+                  <th>商品分类id</th>
+                  <th>超时天数</th>
+                  <th>罚金价格/天</th>
+                  <th>损耗金额</th>
+                  <th>罚金总数</th>
+              </thead>
+              <tbody>
+  
+              </tbody>
+            </table>
+          </div>
 
       </main>
       <!-- //ajax请求 -->

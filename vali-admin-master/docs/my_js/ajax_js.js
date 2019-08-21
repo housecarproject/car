@@ -1,16 +1,15 @@
 //渲染用户信息
 function selectUser(){
     $.ajax({
-        url:'./../PHPMVC/controllers/userController.php',
+        url:'./../PHPMVC/index.php',
         type:'post',
-        data:{'action':'select'},
+        data:{"c":"user","a":""},
         success:function(e){
             try{
                 $res=JSON.parse(e);
                 console.log($res);
                 var str='';
                 for(var i=0;i<$res.length;i++){
-                    // debugger;
                     str+=`
                     <tr>
                         <td>${$res[i]['user_id']}</td>
@@ -37,16 +36,17 @@ $(".user_info").click(function(){
 //渲染管理员信息
 function selectAdmin(){
     $.ajax({
-        url:'./../PHPMVC/controllers/adminController.php',
+        url:'./../PHPMVC/index.php',
         type:'post',
-        data:{'action':'select'},
+        data:{"c":"admin","a":"select"},
         success:function(e){
+            // debugger
             try{
+                // debugger
                 $res=JSON.parse(e);
-                console.log($res);
+                // console.log(e);
                 var str='';
                 for(var i=0;i<$res.length;i++){
-                    // debugger;
                     str+=`<tr>
                             <td>${$res[i]['admin_id']}</td>
                             <td>${$res[i]['admin_name']}</td>
@@ -62,7 +62,44 @@ function selectAdmin(){
     })
 }
 $(".admin_info").click(function(){
-    $(".admin_content").siblings().css("display","none");
+    $(".admin_content").siblings("div").css("display","none");
     $(".admin_content").show();
     selectAdmin();
 })
+
+
+//管理员添加
+$(".add_admin").click(function(){
+    $(".admin_add").siblings('div').css("display","none");
+    $(".admin_add").show();
+})
+//点击
+$(".admin_add_btn").click(function(){
+    add();
+})
+//添加发送的请求
+function add(){
+    $.ajax({
+        url:'./../PHPMVC/index.php',
+        // type:'post',
+        // data:{"c":"admin","a":"select"}, 
+        type:'post',
+        data:{
+            "c":"admin","a":"a_add_c",
+            "adminName":$('.admin_name').val(),
+            "adminPassword":$('.admin_pw').val(),
+            "adminType":1
+        },
+        success:function(e){
+            debugger
+            // console.log(e);
+            // try{
+            //     console.log(e);
+            // }catch(e){
+            //     console.log('服务器出错！');
+            // }
+        },error(){
+            console.log('error');
+        }
+    })
+}

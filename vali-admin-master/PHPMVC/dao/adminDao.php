@@ -1,7 +1,5 @@
-<?php
-$path=dirname(dirname(__FILE__)); 
-require_once($path.'/db/db_sql.php');
-class UserDao extends BaseDao{
+<?php 
+class adminDao extends BaseDao{
     //查询
     public function _selectAll(){
         $res=parent::table('tab_admin')->select();
@@ -9,12 +7,12 @@ class UserDao extends BaseDao{
     }
     //删除
     public function _del($id){
-        $res=parent::table('tab_user')->where("user_id=$id")->delete();
+        $res=parent::table('tab_admin')->where("user_id=$id")->delete();
         return $res;
     }
     //添加
     public function _add($data){
-        $res=parent::table('tab_user')->insert($data);
+        $res=parent::table('tab_admin')->insert($data);
         return $res;
     }
     //修改
@@ -30,6 +28,7 @@ class UserDao extends BaseDao{
         return $res;
     }
 }
-$s=new UserDao;
+// $s=new adminDao;
 // echo json_encode($s->_selectAll());
-echo json_encode($s->_selectAll());
+
+
