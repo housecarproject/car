@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+        <div class="container" style="background: #fff">
+                <div class="b1"></div>
+                <div class="head">
+                    <div class="logo">
+                        <img class="logoimg" src="./img/房车.png" alt="">
+                        <span class="logoname">The rental</span>
+                    </div>
+                    <div class="nav">
+                        <div><a class="navele" href="./supIndex.html">首页/Home</a></div>
+                        <div><a class="navele" href="./product.html">租赁/Lease</a></div>
+                        <div><a class="navele" href="">联系/Contact</a></div>
+                        <div><a class="navele" href="">关于/about</a></div>
+                        <div>
+                            <a class="navele" href="./personalCenter.html"><img
+                                    style="width: 15px;height:15px;vertical-align: middle" src="./img/登录注册.png" alt=""><span
+                                    style="font-size: 14px;text-algin:center;vertical-align: middle">个人中心</span></a>
+        
+                        </div>
+                        <div><a class="navele" href="./login.html">注册/登录</a></div>
+                    </div>
+                </div>
+                <div class="prodetail">
+                    <div class="bigpro">
+                        <div class="small">
+                            <div class="mask"></div>
+                        </div>
+                        <div class="big">
+                            <div class="bigone"></div>
+                        </div>
+                        <div class="simg"></div>
+        
+                    </div>
+                    <div class="pro-inf">
+                        <div class="typename">高级房车</div>
+                        <div style="color: grey">☆☆☆☆☆</div>
+                        <div class="pricebox">
+                            <span class="needpayPrice2">价 &nbsp&nbsp &nbsp 格:</span>
+                           
+                            <span style="font-size: 23px;font-weight: bold;">
+                                        
+                                 
+                                
+              
+                                <!-- 这个2800是要渲染 -->
+                                         <span id="needpayPrice">2800</span>
+        
+        
+        
+        
+        
+                            </span>
+                            <span style="color: rgb(84, 181, 171);font-size: 23px;font-weight: bold;">元/天</span>
+                        </div>
+                        <div class="servicetype"><span class="needpayPrice2">服务方式:</span> 门店自提</div>
+                        <div class="servicetype"><span class="needpayPrice2">服务范围:</span> 西安市</div>
+                        <div class="servicetype "><span class="needpayPrice2">出行日期:</span>
+                            <input type="date" id="order_time">
+                        </div>
+                        <div class="servicetype"><span class="needpayPrice1">天数:</span>
+                        <span class="needpayDay">
+                            <button class="add">+</button>
+                            <input type="num" name="num" id="num" value="0">
+                            <!-- <span class="countNum"></span> -->
+                            <button class="reduce">-</button>
+                        </span>
+                        </div>
+                        <div class="servicetype"><span class="needpayPrice1">合计:</span>
+                            <span class="totalpayPrice">0</span>
+                        </div>
+                        <div class="buybtn">立&nbsp&nbsp即&nbsp&nbsp购&nbsp&nbsp买</div>
+                    </div>
+                    <hr color="lightgray">
+                    <div class="evalubox">
+                        <div class="evaluhead">
+                            <div class="detail">商品详情</div>
+                            <div class="user-evalu">用户评价</div>
+                        </div>
+                        <div class="pro-eval">
+                            <div class="information"><div>本款房车逾期¥10000/天哦!请各位用户注意及时归还哦</div> <div><img src="./../../images/a/a1_2.jpg" alt=""></div><div><img src="./../../images/a/a1_1.jpg" alt=""></div></div>
+                            <div class="evaluates"><span>用户:李华</span> &nbsp <span>房车里面空间很大,十分舒适,自驾游首选!</span></div>
+        
+                        </div>
+                    </div>
+                </div>
+        
+        
+        
+            </div>
+    <!-- <div class="profoot"><img class="pimg" src="./img/尾部.png" alt=""></div> -->
+
+    <script>
+        var small = document.getElementsByClassName('small')[0];
+        var mask = document.getElementsByClassName('mask')[0];
+        var bigone = document.getElementsByClassName('big')[0];
+
+        small.onmouseover = function (event) {
+            small.onmousemove = function (event) {
+                var event = event || window.event;
+                var left_ = event.clientX - 270 - small.offsetLeft;
+                var top_ = event.clientY - 220 - small.offsetTop;
+                mask.style.left = left_ + 'px';
+                mask.style.top = top_ + 'px';
+                bigone.scrollLeft = left_ * 2;
+                bigone.scrollTop = top_ * 2;
+
+
+                $('.big').css("display", "block");
+                $('.mask').css("display", "block");
+                // console.log(left_)
+                //  //获取比例
+                // var biliX = left_ / (small.clientWidth - mask.offsetWidth);
+                // var biliY = top_ / (small.clientHeight - mask.offsetHeight);
+
+                // //通过比例设置大图的位置1 百分比
+                // bigone.style.left = -biliX * (bigone.clientWidth - big.offsetWidth) + "px";
+                // bigone.style.top = -biliY * (bigone.clientHeight - big.offsetHeight) + "px";
+
+            }
+            small.onmouseout = function (event) {
+                var x = event.clientX;
+                var y = event.clientY;
+                var smallx1 = small.offsetLeft;
+                var smally1 = small.offsetTop;
+                var smallx2 = small.offsetLeft + small.offsetWidth;
+                var smally2 = small.offsetTop + small.offsetHeight;
+                if (x > smallx1 && x < smallx2 && y > smally1 && y < smally2) {
+                    //如果进入，则执行。。 
+                    // console.log('没进去');
+                    // $('.big').css("display", "block");
+                   
+                }else{
+                    $('.big').css("display", "none");
+                    $('.mask').css("display", "none")
+                }
+            }
+        }
+
+    </script>
+    <script>
+        $('.detail').click(function () {
+            $('.information').css("display", "block");
+            $('.evaluates').css("display", "none");
+            $('.detail').css({
+                "background": "rgb(84, 181, 171)",
+                "color": "#fff"
+            });
+            $('.user-evalu').css({
+                "color": "black",
+                "background": "rgb(240,240,240)"
+            });
+        })
+        $('.user-evalu').click(function () {
+            $('.evaluates').css("display", "block");
+            $('.information').css("display", "none");
+            $('.user-evalu').css({
+                "background": "rgb(84, 181, 171)",
+                "color": "#fff"
+            });
+            $('.detail').css({
+                "color": "black",
+                "background": "rgb(240,240,240)"
+            });
+        })
+
+    
+
+
+    </script>
+    <script src="./js/proinfo.js"></script>
+    <script src="./js/web_js/product_info.js"></script>
+
+</body>
+
+</html>

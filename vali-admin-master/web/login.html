@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="./../../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="crossorigin="anonymous"></script>
+            <script src="./../../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+        <style>
+            
+        @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400");
+        @import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+         body {
+            height: 100vh;
+            background: #E8E8E8;
+            font-family: "Source Sans Pro", sans-serif;
+            overflow: hidden;
+        } 
+        .fbox{
+            width:800px;
+            height: 600px;
+            background: white;  
+            box-shadow: 0 0 10px gray;
+            border-radius: 10px;
+            position: relative;
+        }
+        /* 登录注册按钮 */
+        .daohang_div{
+            position: absolute;
+            top:5px;
+            left:80%;
+            font-size: 2.5rem;
+        }
+        
+        /* 注册页面 */
+        .user_reg_div{
+            position: absolute;
+            top:150px;
+            left:20%;
+           
+        }
+        /* 登录页面 */
+        .user_login_div{
+            position: absolute;
+            top:150px;
+            left:20%;
+        }
+        input{
+            width: 500px;
+            height:40px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border:1px solid gray
+        }
+        /* 注册的按钮 */
+        .user_reg_btn{
+            width: 500px;
+            height:40px;
+            margin-top: 20px;
+           
+        }
+        .user_login_btn_div{
+            position: absolute;
+            top:150px;
+            left: 150px;
+        }
+        .user_login_btn_div>button{
+            outline: none
+        }
+
+        @media (max-width: 750px) {
+            .container {
+                transform: scale(0.8);
+            }
+        }
+    </style>
+    
+    <script src="./js/web_js/lxt_getSession.js"></script>
+    <!-- <script src="./js/web_js/lxt_login.js"></script> -->
+    </head>
+
+    <body>
+        <div class="fbox">
+            <!-- 注册 -->
+            <div class="daohang_div">
+                <a href="#" class="user_login_show_btn">登录|</a>
+                <a href="#" class="user_reg_show_btn" style="color:red">注册</a>
+            </div>
+            <!-- 注册 -->
+            <div class="user_reg_div">
+                <h3 style="position: absolute;left:32%;top:-50px" class="">欢迎注册!</h3>
+                
+                    <input type="text" class="user_reg_phone " required
+                    placeholder="请输入账号（手机号码）" >
+
+                    <input type="password" class="user_reg_pwd " required
+                    placeholder="请输入密码6-12位密码（数字、大小写字母）" >
+               
+                    <input type="text" class="user_reg_iden " required
+                    placeholder="请输入身份证号码" >
+
+                    <input type="text" class="user_reg_name " required placeholder="请输入姓名" >
+
+                    <input type="text" class="user_reg_address " required
+                    placeholder="请详细地址密码">
+                    <div class="user_reg_tip" style="color:green"></div>
+
+                    <button class="btn btn-primary user_reg_btn">注册</button>
+                  
+            </div>
+            <!-- 登录 -->
+            <div class="user_login_div"   style="display: none">
+                    <h3 style="position: absolute;left:30%;top:-50px" class="">请登录哦!</h3>
+                
+                    <input type="text" class="user_login_phone " placeholder="账号（电话）">
+              
+                    <input type="password" class="user_login_password" minlength="6" maxlength="12"
+                        placeholder="密码">
+
+                <div style="margin-top: 10px" class="user_login_btn_div">
+                    <button id="abcd" class="btn btn-success user_login_btn">登录</button>
+                    <button class="btn btn-danger user_login_reset_btn">重置</button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 李雪婷 -->
+        <script src="./js/web_js/lxt_login.js"></script>
+        <script>
+        $("#signup").click(function () {
+            $(".message").css("transform", "translateX(100%)");
+            if ($(".message").hasClass("login")) {
+                $(".message").removeClass("login");
+            }
+            $(".message").addClass("signup");
+        });
+
+        $("#login").click(function () {
+            $(".message").css("transform", "translateX(0)");
+            if ($(".message").hasClass("login")) {
+                $(".message").removeClass("signup");
+            }
+            $(".message").addClass("login");
+        });
+    </script>
+    </body>
+
+</html>

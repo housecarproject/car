@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta name="description"
-      content="Vali is a responsive and free admin theme built with Bootstrap 4,
+    <meta name="description" content="Vali is a responsive and free admin theme
+      built with Bootstrap 4,
       SASS and PUG.js. It's fully customizable and modular.">
     <!-- Twitter meta-->
     <meta property="twitter:card" content="summary_large_image">
@@ -16,8 +15,8 @@
     <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin">
     <meta property="og:image"
       content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
-    <meta property="og:description"
-      content="Vali is a responsive and free admin theme built with Bootstrap 4,
+    <meta property="og:description" content="Vali is a responsive and free admin
+      theme built with Bootstrap 4,
       SASS and PUG.js. It's fully customizable and modular.">
     <title>Vali Admin - Free Bootstrap 4 Admin Template</title>
     <meta charset="utf-8">
@@ -28,19 +27,17 @@
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    //jquery
+    <!-- //jquery -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
       integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="crossorigin="anonymous"></script>
     <link rel="stylesheet"
       href="./../../bootstrap-3.3.7-dist/css/bootstrap.min.css">
-    <script src="./../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
   </head>
 
   <body class="app sidebar-mini rtl">
-    <!-- Navbar-->
+
     <header class="app-header"><img id="car_img" style="width: 40px; height:
-        25px" src="./img/car.png"><a
-        class="app-header__logo" href="index.html">CAR</a>
+        25px" src="./img/car.png"><a class="app-header__logo" href="index.html">CAR</a>
       <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#"
         data-toggle="sidebar"
         aria-label="Hide Sidebar"></a>
@@ -66,7 +63,6 @@
           </li>
         </ul>
       </header>
-      <!-- Sidebar menu-->
       <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
       <aside class="app-sidebar">
         <div class="app-sidebar__user"><img class="app-sidebar__user-avatar"
@@ -74,13 +70,9 @@
             alt="User Image">
           <div>
             <p class="app-sidebar__user-name">管理员</p>
-            <p class="app-sidebar__user-designation">Frontend Developer</p>
           </div>
         </div>
         <ul class="app-menu">
-          <!-- <li><a class="app-menu__item active" href="index.html"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">管理员信息</span></a>
-        
-        </li> -->
           <li class="treeview"><a class="app-menu__item" href="#"
               data-toggle="treeview"><i
                 class="app-menu__icon fa fa-edit"></i><span
@@ -89,8 +81,8 @@
             <ul class="treeview-menu">
               <li><a class="treeview-item admin_info" href="#"><i class="icon fa
                     fa-circle-o"></i> 普通管理员信息表</a></li>
-              <li><a class="treeview-item add_admin" href="#" ><i class="icon fa
-                    fa-circle-o "></i> 添加普通管理员</a></li>
+              <li><a class="treeview-item add_admin" href="#"><i class="icon fa
+                    fa-circle-o"></i> 添加普通管理员</a></li>
             </ul>
           </li>
           <li class="treeview"><a class="app-menu__item" href="#"
@@ -106,12 +98,14 @@
                 class="app-menu__label">房车管理</span><i
                 class="treeview-indicator fa fa-angle-right"></i></a>
             <ul class="treeview-menu">
-              <li><a class="treeview-item" href="#"><i class="icon fa
+              <li><a class="treeview-item product_info" href="#"><i class="icon
+                    fa
                     fa-circle-o"></i> 房车信息表</a></li>
-              <li><a class="treeview-item" href="#"><i class="icon fa
+              <li><a class="treeview-item product_add_info" href="#"><i
+                    class="icon fa
                     fa-circle-o"></i> 添加房车</a></li>
-              <!-- <li><a class="treeview-item" href="form-samples.html"><i class="icon fa fa-circle-o"></i> 修改房车信息</a></li> -->
-              <li><a class="treeview-item" href="#"><i class="icon fa
+              <li><a class="treeview-item producttype_info" href="#"><i
+                    class="icon fa
                     fa-circle-o"></i> 房车分类</a></li>
             </ul>
           </li>
@@ -121,12 +115,10 @@
                 class="app-menu__label">订单管理</span><i
                 class="treeview-indicator fa fa-angle-right"></i></a>
             <ul class="treeview-menu">
-              <li><a class="treeview-item" href="#"><i class="icon fa
+              <li><a class="treeview-item AllOrder" href="#"><i class="icon fa
                     fa-circle-o"></i> 所有订单</a></li>
-              <li><a class="treeview-item" href="#"><i class="icon fa
+              <li><a class="treeview-item Ordering" href="#"><i class="icon fa
                     fa-circle-o"></i> 正在进行的订单</a></li>
-              <li><a class="treeview-item" href="#"><i class="icon fa
-                    fa-circle-o"></i> 已完成订单</a></li>
             </ul>
           </li>
           <li class="treeview"><a class="app-menu__item" href="#"
@@ -135,9 +127,9 @@
                 class="app-menu__label">罚金管理</span><i
                 class="treeview-indicator fa fa-angle-right"></i></a>
             <ul class="treeview-menu">
-                <!-- <li><a class="treeview-item" href="#"><i class="icon fa
+              <!-- <li><a class="treeview-item" href="#"><i class="icon fa
                   fa-circle-o"></i>损耗管理</a></li> -->
-              <li><a class="treeview-item" href="#"><i class="icon fa
+              <li><a class="treeview-item payFine" href="#"><i class="icon fa
                     fa-circle-o"></i>缴纳罚金记录</a></li>
               <li><a class="treeview-item needpay" href="#"><i class="icon fa
                     fa-circle-o"></i>待缴纳罚金</a></li>
@@ -150,12 +142,11 @@
                 class="treeview-indicator fa fa-angle-right"></i></a>
             <ul class="treeview-menu">
               <li><a class="treeview-item evalu_info" href="#"><i class="icon fa
-                    fa-circle-o"></i><span app-menu__label >评价详情</span></a></li>
-
+                    fa-circle-o"></i><span app-menu__label>评价详情</span></a></li>
             </ul>
           </li>
-          <li class="treeview"><a class="app-menu__item" href="Business.html"
-              data-toggle="treeview"><i
+          <li class="treeview"><a class="app-menu__item business_info"
+              href="index.html" data-toggle="treeview"><i
                 class="app-menu__icon fa fa-laptop"></i><span
                 class="app-menu__label business">营业信息</span></a>
             <ul class="treeview-menu">
@@ -166,11 +157,13 @@
       </aside>
       <main class="app-content">
         <!-- 主要内容 -->
-        <!-- 管理员 -->
+
+        <!-- 李雪婷 -->
+        <!-- 渲染管理员 -->
         <div class="admin_content" style='display: none'>
           <table class="table table-striped">
             <thead>
-              <th>管理员id</th>
+              <th>管理员账号</th>
               <th>管理员姓名</th>
               <th>管理员密码</th>
               <th>操作</th>
@@ -180,22 +173,66 @@
             </tbody>
           </table>
         </div>
-
         <!-- 用户 -->
         <div class="user_content" style='display: none'>
           <table class="table table-striped table-hover">
             <thead>
-                <th>用户id</th>
-                <th>用户姓名</th>
-                <th>用户密码</th>
-                <th>联系电话</th>
-                <th>身份证号码</th>
+              <th>用户账号</th>
+              <th>用户密码</th>
+              <th>操作</th>
             </thead>
             <tbody>
 
             </tbody>
           </table>
         </div>
+        <!-- 用户详情 -->
+        <div class="user_detail_show" style="display:none">
+          <button class="btn btn-primary exitUserDetail">退出</button>
+          <table class="table table-striped table-hover" style="box-shadow: 0 0 5px gray;margin-top: 10px">
+            <thead>
+              <th>账号/联系电话</th>
+              <th>姓名</th>
+              <th>密码</th>
+              <th>身份证号码</th>
+              <th>详细地址</th>
+            </thead>
+            <tbody>
+
+            </tbody>
+          </table>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- 管理员添加 -->
+        <div class="admin_add" style='display: none'>
+          <div class="form-group">
+            <label for="exampleInputEmail1">管理员账号</label>
+            <input type="text" class="form-control admin_phone"
+              id="exampleInputEmail1" required placeholder="phone">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">管理员姓名</label>
+            <input type="text" class="form-control admin_name"
+              id="exampleInputEmail1" required placeholder="name">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">管理员密码</label>
+            <input type="text" class="form-control admin_pw"
+              id="exampleInputPassword1" required placeholder="password">
+          </div>
+          <button type="submit" class="btn btn-default admin_add_btn">添加</button>
+        </div>
+
+        <!-- 张总 -->
         <!-- 评价 -->
         <div class="evaluate_content" style='display:none'>
           <table class="table table-striped table-hover">
@@ -208,35 +245,307 @@
               <th>操作</th>
             </thead>
             <tbody>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 曾哥 -->
+        <!-- 缴纳罚金记录 -->
+        <div class="payFine_content" style='display: none'>
+          <table class="table table-striped table-hover">
+            <thead>
+              <th>罚金编号</th>
+              <th>订单编号</th>
+              <th>用户名</th>
+              <th>罚金类型</th>
+              <th>逾期罚金/天</th>
+              <th>超时天数</th>
+              <th>损耗价格</th>
+              <th>罚金总额</th>
+            </thead>
+            <tbody class="payFine_content1">
+            </tbody>
+          </table>
+        </div>
+        <!-- 待缴纳罚金列表 -->
+        <div class="needpay_content" style='display: none'>
+          <table class="table table-striped table-hover">
+            <thead>
+              <th>订单编号</th>
+              <th>用户名</th>
+              <th>房车名称</th>
+              <th>订单编号</th>
+              <th>状态</th>
+              <th>租赁天数</th>
+              <th>下单时间</th>
+              <th>到期时间</th>
+              <th>归还日期</th>
+              <th>超时天数</th>
+              <th>罚金数额</th>
+              <th>总金额</th>
+            </thead>
+            <tbody class="needpay_content1">
+            </tbody>
+          </table>
+        </div>
+        <!-- 所有订单列表 -->
+        <div class="AllOrder_content" style='display: none'>
+          <table class="table table-striped table-hover">
+            <thead>
+              <th>订单编号</th>
+              <th>用户名</th>
+              <th>房车名称</th>
+              <th>订单编号</th>
+              <th>状态</th>
+              <th>租赁天数</th>
+              <th>下单时间</th>
+              <th>到期时间</th>
+              <th>归还日期</th>
+              <th>超时天数</th>
+              <th>罚金类型</th>
+              <th>罚金数额</th>
+              <th>总金额</th>
+              <th>操作</th>
+            </thead>
+            <tbody class="AllOrder_content1">
+            </tbody>
+          </table>
+        </div>
+        <!-- 正在进行订单列表 -->
+        <div class="Ordering_content" style='display: none'>
+          <table class="table table-striped table-hover">
+            <thead>
+              <th>订单编号</th>
+              <th>用户名</th>
+              <th>房车名称</th>
+              <th>订单编号</th>
+              <th>状态</th>
+              <th>租赁天数</th>
+              <th>下单时间</th>
+              <th>到期时间</th>
+              <th>归还日期</th>
+              <th>超时天数</th>
+              <th>罚金类型</th>
+              <th>罚金数额</th>
+              <th>总金额</th>
+            </thead>
+            <tbody class="Ordering_content1">
+            </tbody>
+          </table>
+        </div>
+
+
+        <!-- 豆哥 -->
+        <!-- 修改房车-->
+        <div class="product_form" style="display:none">
+          <!-- <form> -->
+          <div class="form-group">
+            <label for="exampleInputEmail1">房车名字</label>
+            <input type="text" class="form-control product_name"
+              id="exampleInputEmail1" placeholder="name">
+          </div>
+          <!-- <div class="form-group">
+      <label for="exampleInputEmail1">房车名字</label>
+      <input type="text" class="form-control product_name" id="exampleInputEmail1" placeholder="img_id">
+      </div> -->
+          <div class="form-group">
+            <label for="exampleInputPassword1">车牌号码</label>
+            <input type="text" class="form-control product_licensenum"
+              id="exampleInputPassword1" placeholder="number">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">载客量</label>
+            <input type="text" class="form-control product_person"
+              id="exampleInputEmail1" placeholder="1-6">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">房车类别</label>
+            <!-- <input type="text" class="form-control product_type" id="exampleInputEmail1" placeholder="1,2,3"> -->
+            <select id="product_type">
+              <!-- <option></option> -->
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">租赁状态</label>
+            <!-- <input type="text" class="form-control product_state" id="exampleInputEmail1" placeholder="未租赁0/租赁中1"> -->
+            <select name="" id="product_state">
+
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">成本</label>
+            <input type="text" class="form-control product_costprice"
+              id="exampleInputEmail1" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">租金</label>
+            <input type="text" class="form-control product_rentalprice"
+              id="exampleInputEmail1" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">押金</label>
+            <input type="text" class="form-control product_cashpledge"
+              id="exampleInputEmail1" placeholder="">
+          </div>
+          <button type="submit" class="btn btn-default product_update_btn">修改</button>
+          <!-- </form> -->
+        </div>
+        <!-- 渲染房车 -->
+        <!-- 房车信息 -->
+        <div class="product_content" style='display: none'>
+          <table class="table table-striped table-hover">
+            <thead>
+              <th>房车id</th>
+              <th>房车名字</th>
+              <!-- <th>图片id</th> -->
+              <th>车牌号码</th>
+              <th>载客量</th>
+              <th>房车类别</th>
+              <th>租赁状态</th>
+              <th>成本</th>
+              <th>租金</th>
+              <th>押金</th>
+              <!-- <td><button class="btn btn-primary">添加</button></td> -->
+            </thead>
+            <tbody>
 
             </tbody>
           </table>
-
         </div>
 
-        <!-- 待缴纳罚金 -->
-        <div class="needpay_content" style='display: none'>
-            <table class="table table-striped table-hover">
-              <thead>
-                  <th>罚金id</th>
-                  <th>罚金类型id</th>
-                  <th>订单id</th>
-                  <th>商品分类id</th>
-                  <th>超时天数</th>
-                  <th>罚金价格/天</th>
-                  <th>损耗金额</th>
-                  <th>罚金总数</th>
-              </thead>
-              <tbody>
-  
-              </tbody>
-            </table>
-          </div>
 
+        <!-- 老哥哥 -->
+        <!-- 添加房车 -->
+        <div class="form-group product_add" style='display: none'>
+          <label for="exampleInputEmail1">商品图片</label>
+          <div><input name="files_list" multiple="multiple" id="files_list_"
+              type="file" class="img_src">
+            <input id="upload_btn" type="button" value="上传">
+          </div>
+          <!-- 图片二:<input type="file" class="img_src" id="exampleInputEmail1" placeholder="">
+      图片三:<input type="file" class="img_src" id="exampleInputEmail1" placeholder=""> -->
+          <label for="exampleInputEmail1">房车名称</label>
+          <input type="text" class="form-control product_name_add"
+            placeholder="请输入商品名称">
+          <label for="exampleInputEmail1">车牌号</label>
+          <input type="text" class="form-control product_licensenum_add"
+            placeholder="请输入车牌号">
+          <label for="exampleInputEmail1">限乘人数</label>
+          <input type="text" class="form-control product_person_add"
+            placeholder="请输入限乘人数">
+          <label for="exampleInputEmail1">房车类型</label>
+          <!-- <input type="text" class="form-control product_type_add" id="exampleInputEmail1" placeholder="请输入商品类型"> -->
+          <select name="" id="product_type_add">
+
+          </select>
+          <br><label for="exampleInputEmail1">房车状态</label>
+          <!-- <input type="text" class="form-control product_state_add" id="exampleInputEmail1" placeholder="请输入商品状态"> -->
+          <select name="" id="product_state_add">
+
+          </select>
+          <br><label for="exampleInputEmail1">房车进价</label>
+          <input type="text" class="form-control product_costprice_add"
+            placeholder="请输入商品进价">
+          <label for="exampleInputEmail1">房车租金</label>
+          <input type="text" class="form-control product_rentalprice_add"
+            placeholder="请输入商品租金">
+          <label for="exampleInputEmail1">房车押金</label>
+          <input type="text" class="form-control product_cashpledge_add"
+            placeholder="请输入房车押金">
+          <button type="submit" class="btn btn-primary product_add_btn">添加</button>
+        </div>
+        <!-- 房车分类 -->
+        <div class="producttype_content" style='display: none'>
+          <table class="table table-striped table-hover">
+            <thead>
+
+              <th>房车类型id</th>
+              <th>房车类型名称</th>
+            </thead>
+            <tbody>
+
+            </tbody>
+          </table>
+          <button class="btn btn-primary btn_add" style="margin:30px 100px">添加</button>
+        </div>
+        <!-- 房车类型添加的页面 -->
+        <form class="producttype_add" style='display: none'>
+          <div class="form-group">
+            <label for="exampleInputEmail1">房车类型名称</label>
+            <input type="text" class="form-control producttype_name"
+              id="exampleInputEmail1" placeholder="">
+            <!-- <select name="" id="producttype_name"></select> -->
+          </div>
+          <button type="submit" class="btn btn-default producttype_add_btn">添加</button>
+        </form>
+        <!-- 房车类型修改页面 -->
+        <form class="producttype_updata" style='display: none'>
+          <div class="form-group">
+            <label for="exampleInputEmail1">请输入房车类型</label>
+            <input type="text" class="form-control producttype_name_update"
+              id="exampleInputEmail1" placeholder="">
+          </div>
+          <button type="submit" class="btn btn-default producttype_updata_btn">修改</button>
+        </form>
+
+        <!-- 营业信息（默认页面） -->
+        <!-- 用户人数 -->
+        <div class="row default_index" style="display: block">
+          <div class="col-md-6 col-lg-3">
+            <div class="widget-small primary coloured-icon"><i class="icon fa
+                fa-users fa-3x"></i>
+              <div class="info">
+                <h4>用户</h4>
+                <p><b class="existed_user">5</b></p>
+              </div>
+            </div>
+          </div>
+          <!-- 订单人数 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="widget-small info coloured-icon"><i class="icon fa
+                fa-file fa-3x"></i>
+              <div class="info">
+                <h4>订单</h4>
+                <p><b class="existed_order">25</b></p>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="tile">
+              <h3 class="tile-title">表</h3>
+              <div class="embed-responsive embed-responsive-16by9">
+                <canvas class="embed-responsive-item" id="lineChartDemo"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="tile">
+              <h3 class="tile-title">表</h3>
+              <div class="embed-responsive embed-responsive-16by9">
+                <canvas class="embed-responsive-item" id="pieChartDemo"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
       <!-- //ajax请求 -->
-      <script src="my_js/ajax_js.js"></script>
-      <script src="my_js/evalu.js"></script>
+      <script src="./../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+      <!-- 李雪婷的  js -->
+      <script src="my_js/lxt.js"></script>
+      <!-- 张总的  js -->
+      <script src="my_js/zly.js"></script>
+      <!--豆哥的  js  -->
+      <script src="my_js/dsy.js"></script>
+      <!-- 曾哥的  js -->
+      <script src="my_js/z_fine.js"></script>
+      <script src="my_js/z_order.js"></script>
+      <!-- 老哥哥的  js -->
+      <script src="my_js/lgg_producttype.js"></script>
+      <script src="my_js/lgg_product_add.js"></script>
+
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
       <script src="js/main.js"></script>
@@ -283,11 +592,6 @@
       }
     ]
 
-    // var ctxl = $("#lineChartDemo").get(0).getContext("2d");
-    // var lineChart = new Chart(ctxl).Line(data);
-
-    // var ctxp = $("#pieChartDemo").get(0).getContext("2d");
-    // var pieChart = new Chart(ctxp).Pie(pdata);
   </script>
       <!-- Google analytics script-->
       <script type="text/javascript">

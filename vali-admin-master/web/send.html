@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="crossorigin="anonymous"></script>
+    <script src="./js/web_js/lxt_getSession.js"></script>
+</head>
+
+<body>
+    <input id="id" type="text">
+    <input id="date" type="text" value="">
+    <input id="day" type="text" value="">
+    <input id="btn" type="button" value="go">
+
+    <script>
+        var id = document.getElementById('id');
+        var date = document.getElementById('date');
+        var day = document.getElementById('day');
+        var btn = document.getElementById('btn');
+
+        function get(key){
+            var a=location.search;
+            var b=a.substr(1);
+            var str=b.split("&");
+            var obj={};
+            for(var i=0;i<str.length;i++){
+                obj[str[i].split('=')[0]]=str[i].split('=')[1];
+            }
+            return obj[key];
+        }
+        
+        if(get('id')==null){
+            id.value=null;
+        }else{
+            id.value=get('id');
+        }
+
+        btn.onclick = function () {
+            location.href = 'get.html?id=' + id.value + '&date=' + date.value+ '&day=' + day.value;
+        }
+    </script>
+</body>
+
+</html>

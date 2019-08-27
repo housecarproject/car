@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./js/layui/css/layui.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    
+    <script src="./js/web_js/lxt_getSession.js"></script>
+</head>
+
+<body>
+    <div class="b1"></div>
+    <div class="head">
+        <div class="logo">
+            <img class="logoimg" src="./img/房车.png" alt="">
+            <span class="logoname">The rental</span>
+        </div>
+        <div class="nav">
+            <div><a class="navele" href="">首页/Home</a></div>
+            <div><a class="navele" href="./product.html">租赁/Lease</a></div>
+            <div><a class="navele" href="">联系/Contact</a></div>
+            <div><a class="navele" href="">关于/about</a></div>
+            <div class="person_center">
+                <a class="navele" href="./personalCenter.html"><img style="width: 15px;height:15px;vertical-align: middle" src="./img/登录注册.png" alt=""><span style="font-size: 14px;vertical-align: middle">个人中心</span></a>
+            
+            </div>
+            <div class="reg_login"><a class="navele" href="./login.html">注册/登录</a></div>
+        </div>
+        <!-- <a href="./personalCenter.html"><img class="login" src="./img/登录注册.png" alt=""></a> -->
+        <!-- <div style="display: inline-block"> -->
+        <!-- <a href="./login.html"><span class="register">注册/登录</span></a></div> -->
+    </div>
+   
+    <div class="titlepart">
+        <div class="title">
+            The rental
+            <p class="p1">承载着我们对美好新生活的向往</p>
+        </div>
+    </div>
+    <div class="mainbody">
+        <div class="backimg">
+            <div class="leftimg"></div>
+            <div class="right">
+
+                <div class="layui-carousel" id="test1">
+                    <div carousel-item>
+                        <div><img style="height: 550px" src="./img/c4.png" alt=""></div>
+                        <div><img style="height: 550px" src="./img/c2.png" alt=""></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="about">
+            <div class="aboutme"><a href="">About Me</a></div>
+            <div class="intro">
+                <a href="">
+                    房车，又称“车轮上的家”，兼具“房”与“车”两大功能，但其属性还是车，是一种可移动、具有居家必备的基本设施的车种。
+                    房车是由国外引进的时尚设施车种，其车上的居家设施有：卧具、炉具、冰箱、橱柜、沙发、餐桌椅、盥洗设施、空调、电视、音响等家具和电器，可分为驾驶区域、起居区域、卧室区域、卫生区域、厨房区域等，房车是集“衣、食、住、行”于一身，实现“生活中旅行，旅行中生活”的时尚产品。
+                </a>
+            </div>
+            <div class="know">了解更多</div>
+        </div>
+        <div class="backimg2">
+            <div class="info2">
+                <div class="family">family</div>
+                <div class="con">车轮上的家</div>
+                <div class="bot"></div>
+            </div>
+        </div>
+        <div class="service">
+            <div class="sname">service</div>
+            <div class="car-content">
+                <div>
+                    <img src="./img/p1.png" alt="">
+                    <div class="p-intro">普通房车租赁</div>
+                </div>
+                <div>
+                    <img src="./img/p2.png" alt="">
+                    <div class="p-intro">高级房车租赁</div>
+                </div>
+                <div>
+                    <img src="./img/p3.jpg" alt="">
+                    <div class="p-intro">豪华房车租赁</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="contact">COTACT US</div>
+        <div class="coninfo">
+            <span>房车，又称“车轮上的家”，兼具“房”与“车”两大功能，但其属性还是车，是一种可移动、具有居家必备的基本设施的车种。</span>
+           <hr style="background: green;margin-top: 60px">
+           <a href=""><div class="more">联系我们</div></a>
+        </div>
+        <div class="overbox"><img class="foot" src="./img/尾部.png" alt=""></div>
+    </div>
+
+
+    <script src="./js/layui/layui.all.js"></script>
+    <!-- 李雪婷的 -->
+    <script src="./js/web_js/lxt_getSession.js"></script>
+    
+    <script>
+        
+        layui.use('carousel', function () {
+            var carousel = layui.carousel;
+            //建造实例
+            carousel.render({
+                elem: '#test1',
+                width: '70%' //设置容器宽度
+                    ,
+                height: '550px',
+                arrow: 'always' //始终显示箭头
+                    // ,interval:'3000'
+                    ,
+                anim: 'fade' //切换动画方式
+            });
+        });
+
+        var box1 = document.querySelector(".intro");
+        var know = document.querySelector(".know");
+        var info2 = document.querySelector(".backimg2");
+        var infocon = document.querySelector(".info2");
+        //用js检测鼠标滚轮距离顶部位置来给div添加动画
+        window.onscroll = function () {
+            //检测鼠标滚轮距离顶部位置
+            var top = document.documentElement.scrollTop || document.body.scrollTop;
+            // console.log(top);
+            //要设置到DIV显示出来时给div添加动画 也可以设置一个数值只要保证div出来给它加动画即可
+            if (top > (box1.offsetTop - box1.offsetHeight / 2)) {
+                box1.style.animation = "key 1s linear" //添加动画  
+                box1.style.opacity = 1;
+                know.style.animation = "key2 1s linear" //添加动　　　　　  　　　　
+            }
+            if (top > (info2.offsetTop - info2.offsetHeight / 2)) {
+                // debugger
+                // console.log(info2.offsetTop - info2.offsetHeight);
+                infocon.style.animation = "key3 2s linear";
+                // console.log(122131)
+            }
+        }
+    </script>
+
+</body>
+
+</html>

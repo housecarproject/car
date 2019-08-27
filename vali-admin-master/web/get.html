@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table class="fbox" border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <td>id:</td>
+            <td class="box1"></td>
+        </tr>
+        <tr>
+            <td>日期:</td>
+            <td class="box2"></td>
+        </tr>
+        <tr>
+            <td>天数:</td>
+            <td class="box3"></td>
+        </tr>
+    </table>
+    <script>
+        var box1 = document.getElementsByClassName('box1')[0];
+        var box2 = document.getElementsByClassName('box2')[0];
+        var box3 = document.getElementsByClassName('box3')[0];
+
+
+        function get(key){
+            var a=location.search;
+            var b=a.substr(1);
+            var str=b.split("&");
+            var obj={};
+            for(var i=0;i<str.length;i++){
+                obj[str[i].split('=')[0]]=str[i].split('=')[1];
+            }
+            return obj[key];
+        }
+
+        box1.innerHTML = get('id');
+        box2.innerHTML = get('date');
+        box3.innerHTML = get('day');
+    </script>
+</body>
+
+</html>

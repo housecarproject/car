@@ -1,21 +1,53 @@
 <?php 
 class AdminController{
+
     //添加管理员
-    public function a_add_c(){
-        // 数据验证
-        $data=[
-            "admin_name"=>$_POST['adminName'],
-            "admin_password"=>$_POST['adminPassword'],
+    public function add(){
+        $name=$_POST['adminName'];
+        $pw=$_POST['adminPassword'];
+        $phone=$_POST['adminPhone'];
+        $adminService=new AdminService;
+         // 数据验证
+         $data=[
+            "admin_name"=>$name,
+            "admin_password"=>$pw,
+            "admin_phone"=>$phone,
             "admin_type"=>$_POST['adminType'],
         ];
-        // var_dump($data);
-        $adminService=new AdminService;
-        $res=$adminService->a_add_s($data);
-        var_dump($res);
+        $res=$adminService->add($data);
+        return $res;
     }
+
+    //管理员查询
     public function select(){
         $adminService=new AdminService;
-        $res=$adminService->selectAll();
+        $res=$adminService->select();
         echo json_encode($res);
     }
+
+    //删除管理员
+    public function del($adminId){
+        $adminService=new AdminService;
+        $res=$adminService->del($adminId);
+        return $res;
+    }
+
+    //登录时，验证管理员是否存在
+    public function haveAdmin(){
+        $phone=$_POST['loginAdminPhone'];
+        $psd=$_POST['loginAdminPassword'];
+        $adminLogin=new AdminService;
+        $admin=$adminLogin->haveAdmin($phone,$psd);
+        
+        $res=json_encode($admin);
+        // echo $res;
+        $r=count($admin) > 0 ? 1 : 0;
+        echo $r;
+    }  
+    //取到用户人数
+    function getUserNum(){
+        
+
+    }
+
 } 
