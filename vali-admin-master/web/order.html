@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="b1"></div>
+        <div class="head">
+            <div class="logo">
+                <img class="logoimg" src="./img/房车.png" alt="">
+                <span class="logoname">The rental</span>
+            </div>
+            <div class="nav">
+                <div><a class="navele" href="./supIndex.html">首页/Home</a></div>
+                <div><a class="navele" href="">租赁/Lease</a></div>
+                <div><a class="navele" href="">联系/Contact</a></div>
+                <div><a class="navele" href="">关于/about</a></div>
+                <div>
+                    <a class="navele" href="./personalCenter.html"><img
+                            style="width: 15px;height:15px;vertical-align: middle" src="./img/登录注册.png" alt=""><span
+                            style="font-size: 14px;text-align:center;vertical-align: middle">个人中心</span></a>
+
+                </div>
+                <div><a class="navele" href="./login.html">注册/登录</a></div>
+            </div>
+        </div>
+        
+
+        <div class="proback1 clear" style="height: 400px ">
+            <div class="zhifus mg2">
+                <div class="zhifus1 mg2 xi36">【北京】依维柯双拓展房车租赁</div>
+                <img src="./img/房车租赁.png" alt="" style="width: 100px;position: absolute;top: 20px;
+                right: 130px; ">
+                <div class="zhifus4 mg2 xi18">出行日期:<span id="statime">2019-08-24</span></div>
+                <div class="zhifus3 mg2">
+                    <div class="zhifus3l f xi15">预订信息 / Scheduled information</div>
+                </div>
+                <div class="zhifus6 mg2">
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="tab1 xi16 cen">
+                        <tbody>
+                            <tr class="bghuis">
+                                <td>房车名称</td>
+                                <td>租金</td>
+                                <td>押金</td>
+                                <td>天数</td>
+                                <td>到期时间</td>
+                                <td>合计</td>
+                            </tr>
+                            <tr>
+                                <td>【北京】依维柯双拓展房车租赁</td>
+                                <td><span class="huang totalpayPrice1" id="getprice1">1800</span></td>
+                                <td><span class="huang totalpayPrice2" id="getpledge">10000</span></td>
+                                <td><button class="add1">+</button>
+                                    <input type="num" name="num" id="num1" value="1">
+                                    <!-- <span class="countNum"></span> -->
+                                    <button class="reduce1">-</button></td>
+                                <td><span class="huang" id="duetime">2019-08-26</span></td>
+                                <td><span class="huang totalpayPrice1 totalpayPrice111">11800</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="zhifus3 mg2">
+                    <div class="zhifus3l f xi15">联系人信息 / contact information</div>
+                </div>
+                <div class="zhifus8 mg2">
+                    <div class="loginr1 mg2 xi16">联系人姓名:</div>
+                    <div class="loginr2 mg2">
+                        <input name="info[truename]" type="text" class="login_bd1 f xi16 mxi22" placeholder="请输入联系人姓名"
+                            value="">
+                    </div>
+                    <div class="loginr1 mg2 xi16">手机号码:</div>
+                    <div class="loginr2 mg2">
+                        <input name="info[phone]" type="text" class="login_bd1 f xi16 mxi22" placeholder="请输入手机号码"
+                            value="">
+                    </div>
+                </div>
+          
+            </div>
+            <div class="zhifuxz mg2">
+                    <div class="zhifux mg2">
+                        <div class="zhifuxl f xi18">
+                            <span class="xi18">订单总额：<span class="xi24 huang ">￥<span id="showtotalprice">11800</span></span></span>
+                        </div>
+                        <div class="zhifuxr r">
+                            <input name="" type="submit" class="zhifu_an1 f xi20 bai cur tm" value="提交订单">
+                        </div>
+    
+                    </div>
+                </div>
+        </div>
+
+    </div>
+    <div class="profoot"><img class="pimg" src="./img/尾部.png" alt=""></div>
+
+</body>
+<script src="./js/web_js/product_info1.js"></script>
+</html>

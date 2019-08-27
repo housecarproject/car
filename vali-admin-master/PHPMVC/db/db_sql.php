@@ -47,6 +47,7 @@ class BaseDao{
      */
     public function select($fields="*"){
         $fieldsStr = '';
+        // $data="";
         $link = self::$_db;
         if(!$link)return false;
         if(is_array($fields)){
@@ -57,8 +58,17 @@ class BaseDao{
         $sql = "SELECT {$fields} FROM {$this->_table} {$this->_where} {$this->_order} {$this->_limit}";
         // $data = mysqli_fetch_all($this->execute($sql));
         $res=$link->query($sql);
-        $data=$res->fetchAll();
-        return $data;
+        // $data=$res->fetchAll();
+        if(is_object($res)){
+            $data=$res->fetchAll();
+            return $data;
+          //  可以使用  $data = $result->fetchAll();
+        }else{
+            // echo "不是对象";
+
+        }
+
+
     }
  
     /**
