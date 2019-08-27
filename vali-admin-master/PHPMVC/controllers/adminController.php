@@ -1,5 +1,6 @@
 <?php 
 class AdminController{
+
     //添加管理员
     public function add(){
         $name=$_POST['adminName'];

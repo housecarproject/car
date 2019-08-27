@@ -72,7 +72,6 @@ function selectProduct() {
         }
     })
 }
-
 $(".product_info").click(function () {
     $(".product_content").siblings("div").css("display", "none");
     $(".product_content").show();

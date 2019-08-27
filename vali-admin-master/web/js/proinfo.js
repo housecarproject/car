@@ -13,7 +13,6 @@ function get(key){
 
     var idvalue=get('proId');
 
-
 //渲染商品信息
 function renderInfo(){
     console.log(idvalue);
